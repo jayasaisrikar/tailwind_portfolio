@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            z-index: 50;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+                    }
+                },
+                fontFamily: {
+                    'body': ['Orbitron', 'sans-serif'],
+                    'sans': ['Orbitron', 'sans-serif']
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+    <header class="fixed w-full z-50 flex justify-center items-center h-20">
+        <nav class="w-4/5 bg-gray-100 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md rounded-full">
+            <ul class="flex justify-around items-center h-full">
+                <li><a href="index.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Home</a></li>
+                <li><a href="index.html#projects" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Projects</a></li>
+                <li><a href="index.html#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-3">
+        <section id="experience" class="py-32 relative">
+            <div id="experience-background" class="absolute inset-0 z-0"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-5xl font-bold mb-12 text-center neon-text">Professional Experience</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-6">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:rotate-3 fade-in">
+                        <img src="opl.webp" alt="Company 1" class="w-full h-40 object-contain p-4">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">One Paper Lane</h3>
+                            <p class="text-gray-400">Role: Jr. Python Developer</p>
+                            <p class="text-gray-400">May,2024 - Present</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:rotate-3 fade-in">
+                        <img src="tecky.png" alt="Company 2" class="w-full h-40 object-contain p-4">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">Teckybot</h3>
+                            <p class="text-gray-400">Role: Python Fullstack Developer</p>
+                            <p class="text-gray-400">May,2024 - July,2024</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:rotate-3 fade-in">
+                        <img src="SIH.webp" alt="Company 3" class="w-full h-40 object-contain p-4">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2">AI Fullstack Engineer</h3>
+                            <p class="text-gray-400">Role: Team Lead</p>
+                            <p class="text-gray-400">September,2023 - December,2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 py-6 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Your Name | Crafted in the Digital Cosmos</p>
+        </div>
+    </footer>
+
+    <!-- Theme toggle button -->
+    <button id="theme-toggle" class="fixed bottom-5 right-5 p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const html = document.documentElement;
+
+            // Vanta.js background
+            let vantaEffect = null;
+
+            function updateVantaBackground() {
+                if (vantaEffect) vantaEffect.destroy();
+                vantaEffect = VANTA.DOTS({
+                    el: "#experience-background",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    color: html.classList.contains('dark') ? 0x3b82f6 : 0x000000,
+                    backgroundColor: html.classList.contains('dark') ? 0x000000 : 0xffffff,
+                    size: 3.00,
+                    spacing: 40.00
+                });
+            }
+
+            // Initial setup
+            updateVantaBackground();
+
+            // Update on window resize
+            window.addEventListener('resize', updateVantaBackground);
+
+            // Add animation to experience cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(card => {
+                observer.observe(card);
+            });
+
+            // Dark mode toggle
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            toggleButton.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                updateVantaBackground();
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Floating animation for hero text
+            const heroText = document.querySelector('.floating');
+            heroText.style.opacity = '0';
+            heroText.style.transform = 'translateY(50px)';
+            window.addEventListener('scroll', () => {
+                const heroSection = document.querySelector('header');
+                const heroSectionTop = heroSection.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (heroSectionTop < windowHeight) {
+                    heroText.style.opacity = '1';
+                    heroText.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
