@@ -70,6 +70,11 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -94,7 +99,7 @@
             <ul class="flex justify-around items-center h-full">
                 <li><a href="experience.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Experience</a></li>
                 
-                <li><a href="#projects" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Projects</a></li>
+                <li><a href="projects.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Projects</a></li>
                 <li><a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-lg">Contact</a></li>
             </ul>
         </nav>
@@ -105,20 +110,21 @@
             <div id="hero-background" class="absolute inset-0 z-0">
                 <!-- This div will be used for the Vanta.js background on desktop -->
             </div>
-            <div class="absolute inset-0 z-0 bg-cover bg-center md:hidden parallax-back" style="background-image: url('https://jntukucev.hosting2.acm.org/wp-content/uploads/2023/05/srikarsecretary.jpeg');background: blur(2px);"></div>
+            <div class="absolute inset-0 z-0 bg-cover bg-center md:hidden parallax-back" style="background-image: url('#');background: blur(2px);"></div>
             <div class="text-center z-10">
                 <h1 class="text-5xl md:text-7xl font-bold mb-4 neon-text glitch" data-text="Jaya Sai Srikar">Jaya Sai Srikar</h1>
-                <p class="text-xl md:text-2xl mb-8 floating font-bold">Software Developer | Innovator | Tech Visionary</p>
+                <p class="text-xl md:text-2xl mb-8 floating font-bold">Software Developer | Innovator | AI Enthusiast</p>
                 <button class="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-all transform hover:scale-110 hover:rotate-3">
                     <a href="#about">Explore My Universe</a>
                 </button>
             </div>
+            
         </section>
 
         <section id="about" class="py-32 bg-gray-900 skew-y-3">
             <div class="container mx-auto px-8 -skew-y-3">
                 <h2 class="text-5xl font-bold mb-12 text-center neon-text">About Me</h2>
-                <p class="text-xl mb-6 leading-relaxed max-w-3xl mx-auto fadeIn font-primary-400">
+                <p class="text-xl mb-6 leading-relaxed max-w-3xl mx-auto font-primary-400">
                     I'm a visionary software developer, pushing the boundaries of what's possible in the digital realm. 
                     With a passion for cutting-edge technologies and innovative solutions, I strive to create 
                     applications that not only meet but redefine user expectations.
@@ -128,7 +134,7 @@
 
         <section id="projects" class="py-32">
             <div class="container mx-auto px-6">
-                <h2 class="text-5xl font-bold mb-12 text-center neon-text">My Cosmic Creations</h2>
+                <h2 class="text-5xl font-bold mb-12 text-center neon-text">Live Cosmic Creations</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     <a href="https://resucraft.vercel.app">
                       <div class="bg-gray-800 rounded-lg overflow-hidden transform transition-all hover:scale-105 hover:rotate-3 project-card">
@@ -190,7 +196,7 @@
                         <input type="text" placeholder="Your Codename" class="w-full px-4 py-3 rounded-full bg-gray-800 text-white border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </div>
                     <div>
-                        <input type="email" placeholder="Your Communication Frequency" class="w-full px-4 py-3 rounded-full bg-gray-800 text-white border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" placeholder="Your Communication Frequency (Email)" class="w-full px-4 py-3 rounded-full bg-gray-800 text-white border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     </div>
                     <div>
                         <textarea placeholder="Your Transmission" rows="4" class="w-full px-4 py-3 rounded-3xl bg-gray-800 text-white border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
