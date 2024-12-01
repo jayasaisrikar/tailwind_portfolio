@@ -1,1 +1,1 @@
-"# tailwind_portfolio" 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d06a212c-4a73-4188-8547-74a20bb79a33/deploy-status)](https://app.netlify.com/sites/jayasaisrikar/deploys)
